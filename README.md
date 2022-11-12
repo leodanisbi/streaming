@@ -23,6 +23,7 @@ Complete bash script for generating DASH and HLS with FFMPEG, Shaka Packager and
 
 - The file encoder-single-file-mp4.sh encode the video input with ffmpeg to 6 qualities and extract all audios and subtitles stream automaticly, then with shaka-packager generate a VOD for DASH and HLS in the ouput folder.
 - In this example the shaka-packager binary is used which can be downloaded from the official repository [shaka-packager-releases](https://github.com/shaka-project/shaka-packager/releases), below there is more information about other ways to use shaka-packager.
+
 - HLS and DASH outputs are located in the output folder as master.m3u8 for HLS and manifest.mpd for DASH
 
 ### Shaka Player with Youtube theme:
@@ -54,6 +55,11 @@ https://github.com/shaka-project/shaka-packager
 
 # Shaka Player
 Shaka Player is an open-source JavaScript library for adaptive media.  It plays adaptive media formats (such as [DASH][] and [HLS][]) in a browser, without using plugins or Flash. Instead, Shaka Player uses the open web standards [MediaSource Extensions][] and [Encrypted Media Extensions][].
+
+[DASH]: http://dashif.org/
+[HLS]: https://developer.apple.com/streaming/
+[MediaSource Extensions]: https://www.w3.org/TR/media-source/
+[Encrypted Media Extensions]: https://www.w3.org/TR/encrypted-media/
 
 ### Official project
 https://github.com/shaka-project/shaka-player

@@ -29,6 +29,7 @@ Complete bash script for generating DASH and HLS with FFMPEG, Shaka Packager and
 - Finally we can see the output of the shaka player, we need a web server to load the output of shaka packager.
 - The latest version of shaka player is included in this repository, but it can be used from any CDN like [CDN](https://cdnjs.com/libraries/shaka-player).
 - Inside the shaka-player folder edit the youtube-script.js file the variable `youtube_theme_manifestUri` with the url of the manifest.mpd or master.m3u8.
+- A youtube theme was used from the repository https://github.com/lucksy/shaka-player-themes but you can use any other theme.
 
 - This is a simple example of shaka player, if you want to see some more advanced settings you can visit [Shaka-Player-Demo-Docs](https://shaka-player-demo.appspot.com/docs/api/tutorial-basic-usage.html).
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated with https://github.com/google/shaka-packager version v2.6.1-634af65-release-->
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" minBufferTime="PT2S" type="static" mediaPresentationDuration="PT5.28000020980835S">
+  <Period id="0">
+    <AdaptationSet id="0" contentType="video" maxWidth="1920" maxHeight="1080" frameRate="12800/512" subsegmentAlignment="true" par="16:9">
+      <Representation id="0" bandwidth="593514" codecs="avc1.42c01e" mimeType="video/mp4" sar="1:1" width="640" height="360">
+        <BaseURL>video/h264_360p.mp4</BaseURL>
+        <SegmentBase indexRange="828-871" timescale="12800">
+          <Initialization range="0-827"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="1" bandwidth="151313" codecs="avc1.42c00b" mimeType="video/mp4" sar="1:1" width="256" height="144">
+        <BaseURL>video/h264_144p.mp4</BaseURL>
+        <SegmentBase indexRange="827-870" timescale="12800">
+          <Initialization range="0-826"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="2" bandwidth="297608" codecs="avc1.42c00c" mimeType="video/mp4" sar="640:639" width="426" height="240">
+        <BaseURL>video/h264_240p.mp4</BaseURL>
+        <SegmentBase indexRange="848-891" timescale="12800">
+          <Initialization range="0-847"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="3" bandwidth="836025" codecs="avc1.4d401f" mimeType="video/mp4" sar="1280:1281" width="854" height="480">
+        <BaseURL>video/h264_480p.mp4</BaseURL>
+        <SegmentBase indexRange="883-926" timescale="12800">
+          <Initialization range="0-882"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="5" bandwidth="5294458" codecs="avc1.64002a" mimeType="video/mp4" sar="1:1" width="1920" height="1080">
+        <BaseURL>video/h264_1080p.mp4</BaseURL>
+        <SegmentBase indexRange="867-910" timescale="12800">
+          <Initialization range="0-866"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="6" bandwidth="2523194" codecs="avc1.4d4028" mimeType="video/mp4" sar="1:1" width="1280" height="720">
+        <BaseURL>video/h264_720p.mp4</BaseURL>
+        <SegmentBase indexRange="864-907" timescale="12800">
+          <Initialization range="0-863"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="1" contentType="audio" subsegmentAlignment="true">
+      <Representation id="4" bandwidth="133630" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <BaseURL>audio/audio-und.mp4</BaseURL>
+        <SegmentBase indexRange="826-869" timescale="48000">
+          <Initialization range="0-825"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>

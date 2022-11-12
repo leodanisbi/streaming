@@ -1,0 +1,10 @@
+#EXTM3U
+#EXT-X-VERSION:6
+## Generated with https://github.com/google/shaka-packager version v2.6.1-634af65-release
+#EXT-X-TARGETDURATION:6
+#EXT-X-PLAYLIST-TYPE:VOD
+#EXT-X-MAP:URI="audio-und.mp4",BYTERANGE="826@0"
+#EXTINF:5.312,
+#EXT-X-BYTERANGE:88730@870
+audio-und.mp4
+#EXT-X-ENDLIST

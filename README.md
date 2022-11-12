@@ -11,7 +11,16 @@ Complete bash script for generating DASH and HLS with FFMPEG, Shaka Packager and
 </pre>
 
 - The file encoder-single-file-mp4.sh must be executed passing as parameter the name of the video found in the videos folder.
-- The file encoder-single-file-mp4.sh encode the video input with ffmpeg to 6 qualities and extract all audios and subtitles stream automaticly, then with shaka-packaher generate a VOD for DASH and HLS 
+<pre>
+> ./encoder-single-file-mp4.sh SampleVideo_1280x720_1mb.mp4
+</pre>
+
+- We need to install ffmpeg or use Static Builds from official ffmpeg page [Docker](https://ffmpeg.org).
+<pre>
+> apt install ffmpeg
+</pre>
+
+- The file encoder-single-file-mp4.sh encode the video input with ffmpeg to 6 qualities and extract all audios and subtitles stream automaticly, then with shaka-packager generate a VOD for DASH and HLS 
 
 
 # FFmpeg

@@ -1,6 +1,19 @@
 # Streaming
 Complete bash script for generating DASH and HLS with FFMPEG, Shaka Packager and Shaka Player
 
+### Single file MP4 output with dash_only and hls_only options:
+<p>Grant execute permissions to the file encoder-single-file-mp4.sh</p>
+
+<pre>
+> git clone https://github.com/leodanisbi/streaming.git
+> cd streaming
+> chmod +x encoder-single-file-mp4.sh
+</pre>
+
+- The file encoder-single-file-mp4.sh must be executed passing as parameter the name of the video found in the videos folder.
+- The file encoder-single-file-mp4.sh encode the video input with ffmpeg to 6 qualities and extract all audios and subtitles stream automaticly, then with shaka-packaher generate a VOD for DASH and HLS 
+
+
 # FFmpeg
 FFmpeg is a collection of libraries and tools to process multimedia content such as audio, video, subtitles and related metadata.
 

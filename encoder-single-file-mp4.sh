@@ -4,14 +4,14 @@ set -x
 
 # ENSURE WE HAVE AT LEAST AN INPUT FILE
 if [ $# -eq 0 ]; then
-  echo "Usage: encoder.sh.sh <id>"
+  echo "Usage: encoder-single-file-mp4.sh <id>"
   exit 1
 fi
 
 # GET THE VIDEO ID FROM FIRST PARAMETER
 ID=$1
 
-#working directories
+#WORKING DIRECTORIES
 VOLUMEN=/var/www/html/streaming
 INPUT=$VOLUMEN/videos/$ID
 OUTPUT=$VOLUMEN/output/$ID
@@ -26,7 +26,7 @@ language=""
 #CREATE OUTPUT FOLDER
 mkdir -p $OUTPUT
 
-############ VIDEO DETAILS #################################################
+############ VIDEO DETAILS ##################################################
 DURATION=$(ffprobe -hide_banner -i $INPUT 2>&1 | grep Duration | awk '{print $2}' | tr -d ,)
 echo "Duration: $DURATION"
 
@@ -92,7 +92,6 @@ else
 fi
 ###################################################################################
 
-
 ############ H264 encoding ########################################################
 echo "Procesing video"
 ffmpeg -i $INPUT \
@@ -103,7 +102,6 @@ ffmpeg -i $INPUT \
 	-map 0:v -movflags +faststart -vf "scale=-2:720" -c:v libx264 -profile:v main -level:v 4.0 -x264-params scenecut=0:open_gop=0:min-keyint=72:keyint=72 -minrate 3000k -maxrate 3000k -bufsize 3000k -b:v 3000k -y $OUTPUT/h264_main_720p.mp4 \
 	-map 0:v -movflags +faststart -vf "scale=-2:1080" -c:v libx264 -profile:v high -level:v 4.2 -x264-params scenecut=0:open_gop=0:min-keyint=72:keyint=72 -minrate 6000k -maxrate 6000k -bufsize 6000k -b:v 6000k -y $OUTPUT/h264_high_1080p.mp4
 ###################################################################################
-
 
 ############# Single file MP4 output with DASH + HLS ##############################
 echo "Packing video"
@@ -118,5 +116,4 @@ packager $command \
 	--hls_master_playlist_output $OUTPUT/master.m3u8
 ###################################################################################
 
-	
 echo "Completed Process"
